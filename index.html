@@ -11,67 +11,92 @@
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous"
     ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <!-- Top bar Section -->
     <div class="top-bar">
       <div class="container">
-        <div class="left-section">
-          <a href="#"
-            ><img src="assets/topbar/instagram.svg" alt="Instagram"
-          /></a>
-          <a href="#"
-            ><img src="assets/topbar/facebook.svg" alt="Facebook"
-          /></a>
-          <a href="#"><img src="assets/topbar/youtube.svg" alt="YouTube" /></a>
-          <a href="#"><img src="assets/topbar/twitter.svg" alt="Twitter" /></a>
-        </div>
-        <div class="right-section">
-          <span class="clock"
-            ><img src="assets/topbar/clock.svg" alt="Time" /> 10:00 AM to 07:00
-            PM</span
-          >
-          <span class="phone"
-            ><img src="assets/topbar/phone.svg" alt="Phone" /> +91 90999
-            91144</span
-          >
-          <span class="email"
-            ><img src="assets/topbar/email.svg" alt="Email" />
-            info@brightbaby.app</span
-          >
+        <div class="row align-items-center top-bar-menu">
+          <div class="col-md-4">
+            <div class="left-section">
+              <a href="#"
+                ><img src="assets/topbar/instagram.svg" alt="Instagram"
+              /></a>
+              <a href="#"
+                ><img src="assets/topbar/facebook.svg" alt="Facebook"
+              /></a>
+              <a href="#"
+                ><img src="assets/topbar/youtube.svg" alt="YouTube"
+              /></a>
+              <a href="#"
+                ><img src="assets/topbar/twitter.svg" alt="Twitter"
+              /></a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="right-section">
+              <span class="clock"
+                ><img src="assets/topbar/clock.svg" alt="Time" /> 10:00 AM to
+                07:00 PM</span
+              >
+              <span class="phone"
+                ><img src="assets/topbar/phone.svg" alt="Phone" /> +91 90999
+                91144</span
+              >
+              <span class="email"
+                ><img src="assets/topbar/email.svg" alt="Email" />
+                info@brightbaby.app</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Navbar Section -->
-    <header class="site-header">
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0"
+      style="height: 94px"
+    >
       <div class="container">
-        <div class="logo">
-          <img src="assets/header-logo.svg" alt="Bright Baby Logo" />
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+          <img src="assets/header-logo.svg" alt="" />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link">Why BrightBaby</a>
+            <a href="#" class="nav-item nav-link">Features</a>
+            <a href="#" class="nav-item nav-link">Vedic & Scientific Proof</a>
+            <a href="#" class="nav-item nav-link">Video Gallery</a>
+            <a href="#" class="nav-item nav-link">Our Course</a>
+            <a href="#" class="nav-item nav-link">Review</a>
+            <a href="#" class="nav-item nav-link">FAQ</a>
+            <a href="#" class="nav-item nav-link">Blog</a>
+          </div>
         </div>
-        <div class="menu-toggle" id="menu-toggle">
-          <img src="assets/navbar-icon.svg" alt="" />
-        </div>
-        <nav class="main-nav" id="main-nav">
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Why BrightBaby</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Vedic & Scientific Proof</a></li>
-            <li><a href="#">Video Gallery</a></li>
-            <li><a href="#">Our Course</a></li>
-            <li><a href="#">Review</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Blog</a></li>
-          </ul>
-        </nav>
       </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section class="banner">
@@ -117,37 +142,109 @@
     </section>
 
     <!-- Why BrightBaby Section -->
-    <!-- <section class="why-bright">
-      <div class="why-bright-img">
-        <img
-          src="assets/whyBrightBaby/big-image.svg"
-          alt="whyBrightBabyImage"
-          class="big-image"
-        />
-        <div class="mini-image">
-          <img src="assets/whyBrightBaby/mini-image.svg" alt="" />
+    <div class="why-bright-baby">
+      <div class="container position-relative">
+        <div class="whatsapp-btn">
+          <button>
+            <img src="assets/whyBrightBaby/whatsapp.svg" alt="" />Chat on
+            Whatsapp
+          </button>
         </div>
-        <div class="flower-1">
-          <img src="assets/whyBrightBaby/OBJECTS 2.svg" alt="" />
-        </div>
-        <div class="flower-2">
-          <img src="assets/whyBrightBaby/OBJECTS 1.svg" alt="" />
+        <div class="row">
+          <div class="col-md-6">
+            <div class="left-image">
+              <img src="assets/why-brigth-buy.svg" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="right-content">
+              <h4 class="title">Why BrightBaby</h4>
+              <p class="desc">
+                Because motherhood isn’t just about giving birth — it’s about
+                shaping a life from the very first heartbeat.
+              </p>
+              <p class="desc">
+                BrightBaby is not just a Garbh Sanskar course — it's a companion
+                for every expecting and planning mother who dreams of giving her
+                child the best emotional, mental, and spiritual foundation.
+              </p>
+              <h3 class="head">
+                Here’s what makes BrightBaby truly different:
+              </h3>
+              <div class="content">
+                <div class="content-info">
+                  <img src="assets/whyBrightBaby/right.svg" alt="" />
+                  <div>
+                    <h5>Easy and Practical Garbh Sanskar</h5>
+                    <span
+                      >Step-by-step activities for pre-pregnancy and pregnancy,
+                      all in one app.</span
+                    >
+                  </div>
+                </div>
+                <div class="content-info">
+                  <img src="assets/whyBrightBaby/right.svg" alt="" />
+                  <div>
+                    <h5>From Planning to Parenting</h5>
+                    <span
+                      >Support from before conception to baby’s early months
+                      classes, kits and care.</span
+                    >
+                  </div>
+                </div>
+                <div class="content-info">
+                  <img src="assets/whyBrightBaby/right.svg" alt="" />
+                  <div>
+                    <h5>Vedic + Scientific Backing</h5>
+                    <span
+                      >Proven methods to develop your baby’s IQ, EQ, personality
+                      & immunity.</span
+                    >
+                  </div>
+                </div>
+                <div class="content-info">
+                  <img src="assets/whyBrightBaby/right.svg" alt="" />
+                  <div>
+                    <h5>A Caring Community</h5>
+                    <span
+                      >Daily motivation, expert support & thousands of mothers
+                      walking with you.</span
+                    >
+                  </div>
+                </div>
+                <div class="content-info">
+                  <img src="assets/whyBrightBaby/right.svg" alt="" />
+                  <div>
+                    <h5>Honest and Affordable</h5>
+                    <span
+                      >No hype, no hidden costs — just pure, practical
+                      parenthood preparation.</span
+                    >
+                  </div>
+                </div>
+                <div class="content-info">
+                  <img src="assets/whyBrightBaby/right.svg" alt="" />
+                  <div>
+                    <h5>BrightBaby isn’t just an app</h5>
+                    <span
+                      >It’s your journey to a brighter, divine child made
+                      simple. 💫</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-1">
+            <img src="assets/whyBrightBaby/Isolation_Mode.svg" alt="" />
+          </div>
+          <!-- <div class="image-2">
+            <img src="assets/whyBrightBaby/bird.svg" alt="" />
+          </div> -->
         </div>
       </div>
-      <div class="why-bright-baby">
-        <h3>Why BrightBaby</h3>
-        <span
-          >Because motherhood isn’t just about giving birth — it’s about shaping
-          a life from the very first heartbeat.
-        </span>
-        <span
-          >BrightBaby is not just a Garbh Sanskar course — it's a companion for
-          every expecting and planning mother who dreams of giving her child the
-          best emotional, mental, and spiritual foundation.</span
-        >
-        <h4>Here’s what makes BrightBaby truly different:</h4>
-      </div>
-    </section> -->
+    </div>
 
     <!-- BrightBaby Statistic Section -->
     <section class="statistics-section">
@@ -248,29 +345,34 @@
 
     <!-- Video Gallery Section -->
     <section class="video-gallery-section">
-      <h2 class="gallery-title">Video Gallery</h2>
-
-      <div class="video-gallery">
-        <div class="video-item">
-          <iframe
-            src="https://www.youtube.com/embed/J_FWxD6v16s"
-            frameborder="0"
-            allowfullscreen
-          >
-          </iframe>
-        </div>
-        <div class="video-item">
-          <iframe
-            src="https://www.youtube.com/embed/BIBSr6CWSII"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <div class="slider-arrow-left">
-          <img id="left" src="/assets/arrow-left.svg" alt="left-arrow" />
-        </div>
-        <div class="slider-arrow-right">
-          <img id="right" src="/assets/arrow-right.svg" alt="right-arrow" />
+      <div class="container">
+        <h2 class="gallery-title">Video Gallery</h2>
+        <div class="row position-relative">
+          <div class="slider-arrow-left">
+            <img id="left" src="/assets/arrow-left.svg" alt="left-arrow" />
+          </div>
+          <div class="col-md-6">
+            <div class="video-item">
+              <iframe
+                src="https://www.youtube.com/embed/J_FWxD6v16s"
+                frameborder="0"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="video-item">
+              <iframe
+                src="https://www.youtube.com/embed/BIBSr6CWSII"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="slider-arrow-right">
+            <img id="right" src="/assets/arrow-right.svg" alt="right-arrow" />
+          </div>
         </div>
       </div>
     </section>
@@ -361,67 +463,106 @@
 
     <!-- Garbh Sanskar Section -->
     <section class="garbh-section">
-      <div class="title">
-        <h2>Garbh Sanskar — From Vedas to Modern Science</h2>
-        <p>
-          Scientific studies reveal that the emotional state, nutrition, and
-          mindset of a pregnant mother directly <br />impact the baby’s brain
-          development, emotional intelligence (EQ), immunity, and personality
-          traits.
-        </p>
-      </div>
-      <div class="wrapper">
-        <div class="slider-arrow-left">
-          <img id="left" src="/assets/arrow-left.svg" alt="left-arrow" />
+      <div class="container position-relative">
+        <div class="title">
+          <h2>Garbh Sanskar — From Vedas to Modern Science</h2>
+          <p>
+            Scientific studies reveal that the emotional state, nutrition, and
+            mindset of a pregnant mother directly <br />impact the baby’s brain
+            development, emotional intelligence (EQ), immunity, and personality
+            traits.
+          </p>
         </div>
-        <ul class="carousel">
-          <li class="card border-0">
-            <div>
-              <img src="/assets/garbh-1.svg" alt="img" draggable="false" />
-              <div class="card-content">
-                <h3>PrenataLorem ipsum dolor consectetur adipiscing elit</h3>
-                <h5>
-                  Aliquam erat volutpat mauris rhoncus enim urna rhoncus
-                  ultrices nullam fermentum turpis.... 
-                </h5>
-                <a href="#">READ MORE</a>
+
+        <div class="swiper garbh-slider position-relative">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="garbh-box">
+                <img src="/assets/garbh-1.svg" alt="img" />
+                <div class="card-content">
+                  <h3>PrenataLorem ipsum dolor consectetur adipiscing elit</h3>
+                  <h5>
+                    Aliquam erat volutpat mauris rhoncus enim urna rhoncus
+                    ultrices nullam fermentum turpis...
+                  </h5>
+                  <a href="#">READ MORE</a>
+                </div>
               </div>
             </div>
-          </li>
-          <li class="card border-0">
-            <div>
-              <img src="/assets/garbh-2.svg" alt="img" draggable="false" />
-              <div class="card-content">
-                <h3>
-                  Etiam maximus mattis mauris quis consectetur eros dapibus
-                  vitae
-                </h3>
-                <h5>
-                  Duis cursus purus vel urna tristique fringilla vivamus orci
-                  mauris vestibulum ac lobortis et....
-                </h5>
-                <a href="#">READ MORE</a>
+
+            <div class="swiper-slide">
+              <div class="garbh-box">
+                <img src="/assets/garbh-2.svg" alt="img" />
+                <div class="card-content">
+                  <h3>
+                    Etiam maximus mattis mauris quis consectetur eros dapibus
+                    vitae
+                  </h3>
+                  <h5>
+                    Duis cursus purus vel urna tristique fringilla vivamus orci
+                    mauris vestibulum ac lobortis et...
+                  </h5>
+                  <a href="#">READ MORE</a>
+                </div>
               </div>
             </div>
-          </li>
-          <li class="card border-0">
-            <div>
-              <img src="/assets/garbh-3.svg" alt="img" draggable="false" />
-              <div class="card-content">
-                <h3>
-                  Maecenas maximus rhoncus vestibulum suspendisse magna erat
-                </h3>
-                <h5>
-                  Maecenas vestibulum sit amet lorem at viverra. Vestibulum
-                  sagittis ac elit eget luctus....
-                </h5>
-                <a href="#">READ MORE</a>
+
+            <div class="swiper-slide">
+              <div class="garbh-box">
+                <img src="/assets/garbh-3.svg" alt="img" />
+                <div class="card-content">
+                  <h3>
+                    Maecenas maximus rhoncus vestibulum suspendisse magna erat
+                  </h3>
+                  <h5>
+                    Maecenas vestibulum sit amet lorem at viverra. Vestibulum
+                    sagittis ac elit eget luctus...
+                  </h5>
+                  <a href="#">READ MORE</a>
+                </div>
               </div>
             </div>
-          </li>
-        </ul>
+
+            <div class="swiper-slide">
+              <div class="garbh-box">
+                <img src="/assets/garbh-2.svg" alt="img" />
+                <div class="card-content">
+                  <h3>
+                    Etiam maximus mattis mauris quis consectetur eros dapibus
+                    vitae
+                  </h3>
+                  <h5>
+                    Duis cursus purus vel urna tristique fringilla vivamus orci
+                    mauris vestibulum ac lobortis et...
+                  </h5>
+                  <a href="#">READ MORE</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="garbh-box">
+                <img src="/assets/garbh-3.svg" alt="img" />
+                <div class="card-content">
+                  <h3>
+                    Maecenas maximus rhoncus vestibulum suspendisse magna erat
+                  </h3>
+                  <h5>
+                    Maecenas vestibulum sit amet lorem at viverra. Vestibulum
+                    sagittis ac elit eget luctus...
+                  </h5>
+                  <a href="#">READ MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper Arrows -->
+        <div class="slider-arrow-left">
+          <img src="/assets/arrow-left.svg" alt="left-arrow" />
+        </div>
         <div class="slider-arrow-right">
-          <img id="right" src="/assets/arrow-right.svg" alt="right-arrow" />
+          <img src="/assets/arrow-right.svg" alt="right-arrow" />
         </div>
       </div>
     </section>
@@ -875,6 +1016,26 @@
 
       toggle.addEventListener("click", () => {
         nav.classList.toggle("active");
+      });
+    </script>
+
+    <script>
+      const swiper = new Swiper(".garbh-slider", {
+        loop: true,
+        navigation: {
+          nextEl: ".slider-arrow-right",
+          prevEl: ".slider-arrow-left",
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
       });
     </script>
   </body>
