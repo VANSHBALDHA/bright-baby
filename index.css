@@ -76,83 +76,104 @@
 .banner {
   background-color: #f9eefb;
   position: relative;
+  padding: 60px 0;
+  overflow: hidden;
 }
 
-.banner .banner-box {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  padding: 155px 0;
-}
-
-.banner .banner-box .banner-left {
-}
-
-.banner .banner-box .banner-left .big-btn {
+.banner .banner-left .big-btn {
   padding: 8px 14px;
   border: 1px solid #561b63;
   color: #561b63;
+  background-color: transparent;
   font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
-  background-color: transparent;
-  letter-spacing: 0;
   border-radius: 10px;
   margin-bottom: 20px;
 }
 
-.banner .banner-box .banner-left h4 {
-  color: #1a1a1b;
+.banner .banner-left h4 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  letter-spacing: 0;
+  font-size: 36px;
+  line-height: 48px;
+  color: #1a1a1b;
   margin-bottom: 40px;
 }
 
-.banner .banner-box .banner-left strong {
-  font-weight: 900 !important;
+.banner .banner-left .highlight {
+  font-weight: 900;
   font-style: italic;
-  color: #d931fe !important;
+  color: #d931fe;
 }
 
-.banner .banner-box .banner-left .download-btn {
+.banner .banner-left .download-btn {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
-.banner .banner-box .banner-right img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+.banner-right {
+  position: relative;
 }
 
-.banner .flower-box {
+.banner-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.info-card {
   position: absolute;
-  top: 0%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 260px;
+  font-family: "Lato", sans-serif;
+}
+
+.info-card h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.info-card.planners {
+  top: 10%;
+  left: 0;
+  background-color: #e7f7f8;
+  border-left: 5px solid #4b9b94;
+}
+
+.info-card.couples {
+  bottom: 10%;
+  right: 0;
+  background-color: #fde6e4;
+  border-left: 5px solid #d9534f;
+}
+
+.flower-box,
+.top-child-box {
+  position: absolute;
+}
+
+.flower-box {
+  top: 0;
   left: 0;
 }
 
-.banner .top-child-box {
-  position: absolute;
+.top-child-box {
   top: 13%;
   left: 42%;
 }
 
-.banner .top-child-box img {
+.top-child-box img {
   width: 100%;
   height: auto;
-}
-
-.banner .child-box {
-  position: absolute;
-  bottom: 7%;
-  left: 0;
 }
 
 /* Why BrightBaby Section */
@@ -164,6 +185,7 @@
   display: flex;
   justify-content: end;
   margin-bottom: 45px;
+  margin-right: 30px;
 }
 
 .why-bright-baby .whatsapp-btn button {
@@ -247,14 +269,32 @@
 
 .why-bright-baby .image-1 {
   position: absolute;
-  top: 5%;
-  left: 4%;
+  top: 8%;
+  left: 12%;
 }
 
 .why-bright-baby .image-2 {
   position: absolute;
-  bottom: 10%;
-  left: 40%;
+  bottom: 15%;
+  left: 33%;
+}
+
+.why-bright-baby .image-3 {
+  position: absolute;
+  bottom: 30%;
+  left: 5%;
+}
+
+.why-bright-baby .image-4 {
+  position: absolute;
+  top: 21%;
+  right: 5%;
+}
+
+.why-bright-baby .image-5 {
+  position: absolute;
+  bottom: 27%;
+  right: 7%;
 }
 
 /* <!-- BrightBaby Statistic Section --> */
@@ -439,7 +479,7 @@
 }
 
 .video-item iframe {
-  width: 625px;
+  width: 100%;
   height: 352px;
   border: none;
   display: block;
@@ -459,29 +499,68 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
-}
-
-.video-gallery-section .slider-arrow-left {
-  left: -50px;
   background-color: #fcf2ff;
 }
 
-.video-gallery-section .slider-arrow-right {
-  right: -50px;
-  background-color: #673a71;
+.video-gallery-section .slider-arrow-left {
+  left: -55px;
 }
 
-.video-gallery-section .slider-arrow-left img,
-.video-gallery-section .slider-arrow-right img {
-  width: 6px;
-  height: 12px;
+.video-gallery-section .slider-arrow-right {
+  right: -55px;
+}
+
+.video-gallery-section .slider-arrow-left .left-arrow {
+  background-image: url("assets/slider/slider-left-black.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.video-gallery-section .slider-arrow-right .right-arrow {
+  background-image: url("assets/slider/slider-right-black.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.video-gallery-section .slider-icon {
+  background-color: #fcf2ff;
+  border: none;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+  display: flex;
+  transition: background-color 0.3s, background-image 0.3s;
+}
+
+.video-gallery-section .slider-arrow-left:hover .slider-icon {
+  background-color: #752886;
+  background-image: url("assets/slider/slider-left-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.video-gallery-section .slider-arrow-right:hover .slider-icon {
+  background-color: #752886;
+  background-image: url("assets/slider/slider-right-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 /* BrightBaby App Features Styles */
 .bright-app {
   background-color: #673a71;
   display: block;
+}
+
+.bright-app-mobile {
+  display: none;
 }
 
 .bright-app .container {
@@ -531,13 +610,13 @@
 .bright-app .container .image-box .right-line {
   position: absolute;
   bottom: 27%;
-  right: 16.2%;
+  right: 15%;
 }
 
 .bright-app .container .image-box .left-line {
   position: absolute;
   bottom: 27%;
-  left: 18.8%;
+  left: 18.5%;
 }
 
 .bright-app .container .image-box .box-1 {
@@ -704,8 +783,8 @@
 .garbh-section .slider-arrow-left,
 .garbh-section .slider-arrow-right {
   position: absolute;
-  top: 63%;
-  transform: translateY(-63%);
+  top: 62%;
+  transform: translateY(-62%);
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -714,23 +793,58 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  background-color: #fcf2ff;
 }
 
 .garbh-section .slider-arrow-left {
   left: -55px;
-  background-color: #fcf2ff;
 }
 
 .garbh-section .slider-arrow-right {
   right: -55px;
-  background-color: #673a71;
 }
 
-.garbh-section .slider-arrow-left img,
-.garbh-section .slider-arrow-right img {
-  width: 6px;
-  height: 12px;
+.garbh-section .slider-arrow-left .left-arrow {
+  background-image: url("assets/slider/slider-left-black.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.garbh-section .slider-arrow-right .right-arrow {
+  background-image: url("assets/slider/slider-right-black.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.garbh-section .slider-icon {
+  background-color: #fcf2ff;
+  border: none;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+  display: flex;
+  transition: background-color 0.3s, background-image 0.3s;
+}
+
+.garbh-section .slider-arrow-left:hover .slider-icon {
+  background-color: #752886;
+  background-image: url("assets/slider/slider-left-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.garbh-section .slider-arrow-right:hover .slider-icon {
+  background-color: #752886;
+  background-image: url("assets/slider/slider-right-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 /* testimonial styles */
@@ -739,12 +853,7 @@
   padding: 80px 0;
 }
 
-.testimonial .container {
-  max-width: 1280px;
-  margin: auto;
-}
-
-.testimonial .container .title {
+.testimonial .title {
   font-weight: 700;
   font-size: 34px;
   line-height: 40px;
@@ -755,7 +864,7 @@
   margin-bottom: 14px;
 }
 
-.testimonial .container .desc {
+.testimonial .desc {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -766,29 +875,15 @@
   margin-bottom: 40px;
 }
 
-.testimonial .container .rating-box-list ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  list-style: none;
-  gap: 22px;
-}
-
-.testimonial .container .rating-box-list ul li {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.testimonial .container .rating-box-list ul .rate-box {
+.testimonial .rating-box-list .rate-box {
   position: relative;
-  flex-grow: 1;
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 16px;
   padding: 30px;
 }
 
-.testimonial .container .rating-box-list ul .rate-box::before {
+.testimonial .rating-box-list .rate-box::before {
   content: "";
   position: absolute;
   height: 52px;
@@ -799,14 +894,14 @@
   left: 49px;
 }
 
-.testimonial .container .rating-box-list ul .rate-box .star {
+.testimonial .rating-box-list .rate-box .star {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
 }
 
-.testimonial .container .rating-box-list ul .rate-box h5 {
+.testimonial .rating-box-list .rate-box h5 {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -816,7 +911,7 @@
   margin-bottom: 16px;
 }
 
-.testimonial .container .rating-box-list ul .rate-box span {
+.testimonial .rating-box-list .rate-box p {
   color: #6c788c;
   font-weight: 400;
   font-family: "Lato", sans-serif;
@@ -824,9 +919,35 @@
   font-style: italic;
   line-height: 22px;
   letter-spacing: 0;
+  margin: 0;
+  overflow: auto;
+  height: 90px;
+  width: 100%;
 }
 
-.testimonial .container .rating-box-list ul .testi-name {
+.testimonial .rating-box-list .rate-box p::-webkit-scrollbar {
+  width: 5px;
+}
+
+.testimonial .rating-box-list .rate-box p::-webkit-scrollbar-track {
+  background: #e5c9eb;
+  border-radius: 10px;
+}
+
+.testimonial .rating-box-list .rate-box p::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #a473af;
+}
+
+.testimonial .rating-box-list .rate-box p::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.testimonial .rating-box-list .rate-box p::-webkit-scrollbar-button {
+  display: none;
+}
+
+.testimonial .rating-box-list .testi-name {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -834,12 +955,12 @@
   margin-left: 78px;
 }
 
-.testimonial .container .rating-box-list ul .testi-name img {
+.testimonial .rating-box-list .testi-name img {
   border-radius: 50%;
   border: 4px solid #673a71;
 }
 
-.testimonial .container .rating-box-list ul .testi-name h5 {
+.testimonial .rating-box-list .testi-name h5 {
   color: #1a1a1b;
   font-weight: 600;
   font-size: 18px;
@@ -848,14 +969,14 @@
   font-family: "Lato", sans-serif;
 }
 
-.testimonial .container .view-all {
+.testimonial .view-all {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 61px;
 }
 
-.testimonial .container .view-all button {
+.testimonial .view-all button {
   font-family: "Lato", sans-serif;
   display: block;
   background-color: #673a71;
@@ -872,15 +993,89 @@
   transition: 0.4s;
 }
 
-.testimonial .container .view-all button:hover {
+.testimonial .view-all button:hover {
   border: 1px solid #673a71;
   background-color: #fff;
   color: #1a1a1b;
 }
 
+.testimonial .testimonial_arrow {
+  display: block;
+}
+
+.testimonial_arrow_mobile {
+  display: none;
+}
+
+.rating-box-list .slider-arrow-left,
+.rating-box-list .slider-arrow-right {
+  position: absolute;
+  top: 43%;
+  transform: translateY(-43%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcf2ff;
+}
+
+.rating-box-list .slider-arrow-left {
+  left: -55px;
+}
+
+.rating-box-list .slider-arrow-right {
+  right: -55px;
+}
+
+.rating-box-list .slider-arrow-left .left-arrow {
+  background-image: url("assets/slider/slider-left-black.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.rating-box-list .slider-arrow-right .right-arrow {
+  background-image: url("assets/slider/slider-right-black.svg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.slider-icon {
+  background-color: #fff;
+  border: none;
+  border-radius: 100%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+  display: flex;
+  transition: background-color 0.3s, background-image 0.3s;
+}
+
+.rating-box-list .slider-arrow-left:hover .slider-icon {
+  background-color: #752886;
+  background-image: url("assets/slider/slider-left-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.rating-box-list .slider-arrow-right:hover .slider-icon {
+  background-color: #752886;
+  background-image: url("assets/slider/slider-right-white.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
 /* our-course styles*/
 .our-course {
-  /* max-width: 1280px; */
   margin: auto;
   padding: 100px 0 150px 0;
 }
@@ -894,13 +1089,6 @@
   font-family: "Lato", sans-serif;
   text-align: center;
   margin-bottom: 40px;
-}
-
-.our-course .course-main {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  justify-content: center;
 }
 
 .our-course .our-box-size {
@@ -945,7 +1133,7 @@
   letter-spacing: 0;
 }
 
-.our-course .course-desc .btn button {
+.our-course .course-desc button {
   width: 100%;
   border-radius: 8px;
   padding: 13px 0;
@@ -984,6 +1172,23 @@
   background-color: #fcf2ff;
 }
 
+.blog-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.blog-heading a {
+  color: #6C788C;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0;
+  display: block;
+}
+
 .blog-title {
   text-align: center;
   color: #1a1a1b;
@@ -992,7 +1197,7 @@
   font-size: 34px;
   line-height: 40px;
   letter-spacing: 0;
-  margin-bottom: 40px;
+  margin: 0;
 }
 
 .blog-gallery {
@@ -1377,6 +1582,68 @@
   .bright-app {
     display: none;
   }
+
+  .garbh-section {
+    padding: 60px 0;
+    margin: 0;
+  }
+
+  .video-gallery-section {
+    padding: 60px 0;
+  }
+
+  .video-gallery-section .video-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .video-item iframe {
+    width: 625px;
+    height: 352px;
+    object-fit: cover;
+  }
+
+  .video-gallery-section .slider-arrow-left {
+    left: -25px;
+  }
+
+  .video-gallery-section .slider-arrow-right {
+    right: -25px;
+  }
+
+  .statistics-section {
+    padding: 60px 0;
+  }
+
+  .statistics-card {
+    margin-bottom: 20px;
+  }
+
+  .our-course {
+    padding: 60px 5px;
+  }
+
+  .our-course .our-box-size {
+    padding-bottom: 20px;
+  }
+
+  .testimonial {
+    padding: 60px 0;
+  }
+
+  .rating-box-list .slider-arrow-left {
+    left: -35px;
+  }
+
+  .rating-box-list .slider-arrow-right {
+    right: -35px;
+  }
+
+  .faq-container {
+    padding: 60px 18px;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1410,8 +1677,87 @@
     width: 18px;
   }
 
+  .navbar-section .navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    padding: 0;
+  }
+
+  .navbar-section .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .why-bright-baby {
+    padding: 60px 8px;
+  }
+
+  .why-bright-baby .right-content {
+    margin-top: 60px;
+  }
+
+  .why-bright-baby .right-content .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .why-bright-baby .right-content .desc {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .why-bright-baby .right-content .head {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .why-bright-baby .content .content-info {
+    gap: 14px;
+  }
+
+  .why-bright-baby .content .content-info h5 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .why-bright-baby .content .content-info span {
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .why-bright-baby .image-1,
+  .why-bright-baby .image-2,
+  .why-bright-baby .image-3,
+  .why-bright-baby .image-4,
+  .why-bright-baby .image-5 {
+    display: none;
+  }
+
+  .why-bright-baby .left-image::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 22px;
+    background: url("/assets/whyBrightBaby/Isolation_Mode.svg") left bottom
+      no-repeat;
+    background-size: cover;
+    top: 8%;
+    left: 80px;
+  }
+
+  .why-bright-baby .left-image::after {
+    content: "";
+    position: absolute;
+    height: 55px;
+    width: 77px;
+    background: url("/assets/whyBrightBaby/sky.svg") left bottom no-repeat;
+    background-size: cover;
+    top: 25%;
+    left: 5%;
+  }
+
   .statistics-section {
-    padding: 60px 0;
+    padding: 60px 8px;
   }
 
   .statistics-title {
@@ -1420,8 +1766,32 @@
     margin-bottom: 30px;
   }
 
+  .statistics-card {
+    margin-bottom: 20px;
+  }
+
+  .garbh-section {
+    padding: 60px 10px;
+    margin: 0;
+  }
+
+  .garbh-section .title h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .garbh-section .title p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .garbh-section .garbh-box .card-content {
+    padding: 20px;
+  }
+
   .video-gallery-section {
-    padding: 60px 0;
+    padding: 60px 20px;
   }
 
   .video-gallery-section .slider-arrow-left,
@@ -1436,8 +1806,40 @@
   }
 
   .video-item iframe {
-    width: 100%;
-    height: auto;
+    height: 188px;
+  }
+
+  .our-course .course-desc {
+    padding: 20px;
+  }
+
+  .testimonial {
+    padding: 60px 10px;
+  }
+
+  .testimonial .title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .testimonial .desc {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 30px;
+  }
+
+  .testimonial .rating-box-list .rate-box {
+    padding: 20px;
+  }
+
+  .testimonial .testimonial_arrow,
+  .testimonial .view-all {
+    display: none;
+  }
+
+  .testimonial_arrow_mobile {
+    display: block;
+    margin-top: 30px;
   }
 
   .gallery-title {
@@ -1451,8 +1853,70 @@
     display: none;
   }
 
-  .our-course .course-main {
-    grid-template-columns: repeat(1, 1fr);
+  .bright-app-mobile {
+    display: block;
+    background-color: #673a71;
+    padding: 60px 0 0 0;
+  }
+
+  .bright-app-mobile .title {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #ffffff;
+    margin-bottom: 42px;
+    text-align: center;
+  }
+
+  .bright-app-mobile .box-line {
+    padding: 0 15px;
+  }
+
+  .bright-app-mobile .image-box-bright {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .bright-app-mobile .image-box-bright img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .bright-app-mobile .image-box-bright h4 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 0;
+    color: #ffffff;
+  }
+
+  /* .bright-app-mobile .mobile-hand-img {
+    content: "";
+    position: absolute;
+    height: 52px;
+    width: 52px;
+    background: url("assets/brightbabyapp/mobile-image.svg")
+       no-repeat;
+  } */
+
+  .our-course {
+    padding: 60px 5px;
+  }
+
+  .our-course .title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .our-course .our-box-size {
+    padding-bottom: 20px;
   }
 
   .blog-gallery {
@@ -1461,5 +1925,55 @@
 
   .footer-container {
     display: grid;
+  }
+
+  .blog-section {
+    padding: 60px 8px;
+  }
+
+  /* .blog-heading a{
+
+  } */
+
+  .blog-section .blog-title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+
+  .blog-item .bog-desc {
+    padding: 10px 32px;
+  }
+
+  .blog-item .bog-desc h5 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .blog-item .blog-date {
+    bottom: 50%;
+    left: 7%;
+  }
+
+  .faq-container {
+    padding: 60px 18px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .faq-container h2 {
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
+
+  .faq-question {
+    font-size: 18px;
+    line-height: 26px;
+    padding: 20px;
+  }
+
+  .faq-answer {
+    padding: 0 50px 20px 20px;
   }
 }
