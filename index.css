@@ -115,10 +115,13 @@
 /* Banner section */
 
 .banner {
-  background-color: #f9eefb;
+  background: url(assets/banner/Group\ 1.png), #f9eefb;
   position: relative;
-  /* padding: 30px 0; */
+  padding: 100px 0;
   overflow: hidden;
+  background-position: right -30px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .banner .child-image {
@@ -211,8 +214,10 @@
 }
 
 .flower-box {
+  position: absolute;
   top: 0;
   left: 0;
+  width: 200px;
 }
 
 .top-child-box {
@@ -226,6 +231,14 @@
 }
 
 @media (max-width: 767px) {
+  .banner {
+    background-image: url("assets/banner/mobile-image-final.png");
+    padding: 0 0 370px 0;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   .banner-right,
   .top-child-box,
   .child-image {
@@ -1681,6 +1694,39 @@
   border-right: 3px solid #7c6382;
   margin-right: 20px;
   padding-right: 20px;
+}
+
+.whatsapp-btn-footer a {
+  align-items: center;
+  animation: pulse 1.5s infinite;
+  border-radius: 50%;
+  bottom: 30px;
+  box-shadow: 0 5px 10px #0000004d;
+  display: flex;
+  font-size: 25px;
+  height: 50px;
+  justify-content: center;
+  position: fixed;
+  right: 30px;
+  transition: transform 0.3s ease;
+  width: 50px;
+  z-index: 9;
+}
+
+.whatsapp-btn-footer a:hover {
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media (max-width: 1024px) {
