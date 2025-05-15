@@ -413,19 +413,27 @@
 
           <!-- Swiper Arrows -->
           <div class="testimonial_arrow">
-            <div class="slider-arrow-left testimonial-slider-arrow-left">
+            <div
+              class="slider-arrow-left testimonial-slider-arrow-left video_left_btn"
+            >
               <div class="left-arrow slider-icon"></div>
             </div>
-            <div class="slider-arrow-right testimonial-slider-arrow-right">
+            <div
+              class="slider-arrow-right testimonial-slider-arrow-right video_right_btn"
+            >
               <div class="right-arrow slider-icon"></div>
             </div>
           </div>
 
           <div class="testimonial_arrow_mobile">
-            <div class="slider-arrow-left testimonial-slider-arrow-left">
+            <div
+              class="slider-arrow-left testimonial-slider-arrow-left video_left_btn"
+            >
               <div class="left-arrow slider-icon"></div>
             </div>
-            <div class="slider-arrow-right testimonial-slider-arrow-right">
+            <div
+              class="slider-arrow-right testimonial-slider-arrow-right video_right_btn"
+            >
               <div class="right-arrow slider-icon"></div>
             </div>
           </div>
@@ -686,18 +694,18 @@
           </div>
         </div>
         <div class="testimonial_arrow">
-          <div class="slider-arrow-left testimonial-slider-arrow-left">
+          <div class="slider-arrow-left testimonial-slider-arrow-left slider-garbh-arrow-left">
             <div class="left-arrow slider-icon"></div>
           </div>
-          <div class="slider-arrow-right testimonial-slider-arrow-right">
+          <div class="slider-arrow-right testimonial-slider-arrow-right  slider-garbh-arrow-right">
             <div class="right-arrow slider-icon"></div>
           </div>
         </div>
         <div class="testimonial_arrow_mobile">
-          <div class="slider-arrow-left testimonial-slider-arrow-left">
+          <div class="slider-arrow-left testimonial-slider-arrow-left slider-garbh-arrow-left">
             <div class="left-arrow slider-icon"></div>
           </div>
-          <div class="slider-arrow-right testimonial-slider-arrow-right">
+          <div class="slider-arrow-right testimonial-slider-arrow-right slider-garbh-arrow-right">
             <div class="right-arrow slider-icon"></div>
           </div>
         </div>
@@ -1301,8 +1309,8 @@
       const videoSwiper = new Swiper(".video-slider", {
         loop: true,
         navigation: {
-          nextEl: ".slider-arrow-right",
-          prevEl: ".slider-arrow-left",
+          nextEl: ".video_right_btn",
+          prevEl: ".video_left_btn",
         },
         slidesPerView: 1,
         spaceBetween: 30,
@@ -1321,8 +1329,8 @@
       const garbhSwiper = new Swiper(".garbh-slider", {
         loop: true,
         navigation: {
-          nextEl: ".slider-arrow-right",
-          prevEl: ".slider-arrow-left",
+          nextEl: ".slider-garbh-arrow-right",
+          prevEl: ".slider-garbh-arrow-left",
         },
         slidesPerView: 1,
         spaceBetween: 20,
