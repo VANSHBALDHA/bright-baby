@@ -236,6 +236,12 @@
   }
 } */
 
+@media (max-width: 1399px) {
+  .banner {
+    background-position: 113% 58%;
+  }
+}
+
 @media (max-width: 767px) {
   .banner {
     background-image: url("assets/banner/mobile-image-final.png");
