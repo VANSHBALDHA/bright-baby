@@ -1001,7 +1001,7 @@
 .testimonial .rating-box-list .rate-box {
   position: relative;
   background-color: #fff;
-  border: 1px solid #d9d9d9;
+  border: 1px solid #e5c9eb;
   border-radius: 16px;
   padding: 30px;
 }
@@ -1011,8 +1011,7 @@
   position: absolute;
   height: 52px;
   width: 52px;
-  background: url("assets/testimonials/icon.svg")
-    left bottom no-repeat;
+  background: url("assets/testimonials/icon.svg") left bottom no-repeat;
   bottom: -51px;
   left: 49px;
 }
