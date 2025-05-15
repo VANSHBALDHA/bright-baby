@@ -230,6 +230,12 @@
   height: auto;
 }
 
+/* @media (max-width: 1399px) {
+  .banner {
+    background-position: right -30px center;
+  }
+} */
+
 @media (max-width: 767px) {
   .banner {
     background-image: url("assets/banner/mobile-image-final.png");
@@ -1350,7 +1356,7 @@
 }
 
 .blog-section .blog-card {
-  background: #fff;
+  background: #fcf2ff;
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
