@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 /* Top bar styles */
 .top-bar {
   background-color: #673a71;
@@ -58,6 +62,10 @@
 }
 
 /* Header Section Styles */
+
+.navbar-section {
+  height: 94px;
+}
 
 .nav-link {
   font-family: "Lato", sans-serif;
@@ -258,7 +266,7 @@
   }
 
   .banner-left {
-    padding-top: 94px;
+    padding-top: 70px;
   }
 
   .flower-box {
@@ -299,29 +307,6 @@
 /* Why BrightBaby Section */
 .why-bright-baby {
   padding: 63px 0;
-}
-
-.why-bright-baby .whatsapp-btn {
-  display: flex;
-  justify-content: end;
-  margin-bottom: 45px;
-  margin-right: 30px;
-}
-
-.why-bright-baby .whatsapp-btn button {
-  background-color: #2cb742;
-  color: #fff;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 26px;
-  letter-spacing: 0;
-  border-radius: 72px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border: none;
 }
 
 .why-bright-baby .left-image img {
@@ -1090,11 +1075,16 @@
   margin-left: 78px;
 }
 
-.testimonial .rating-box-list .testi-name img {
-  border-radius: 50%;
-  border: 4px solid #673a71;
+.testimonial .rating-box-list .testi-name .testi_name_box {
   width: 76px;
   height: 76px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  border: 4px solid #673a71;
 }
 
 .testimonial .rating-box-list .testi-name h5 {
@@ -1104,36 +1094,6 @@
   line-height: 22px;
   letter-spacing: 0;
   font-family: "Lato", sans-serif;
-}
-
-.testimonial .view-all {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 61px;
-}
-
-.testimonial .view-all button {
-  font-family: "Lato", sans-serif;
-  display: block;
-  background-color: #673a71;
-  color: #ffffff;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 0;
-  border: none;
-  padding: 13px 30px;
-  cursor: pointer;
-  border: 1px solid #673a71;
-  transition: 0.4s;
-}
-
-.testimonial .view-all button:hover {
-  border: 1px solid #673a71;
-  background-color: #fcf2ff;
-  color: #1a1a1b;
 }
 
 .testimonial .testimonial_arrow {
@@ -1246,12 +1206,15 @@
   border-right: 1px solid #dfdfdf;
   border-left: 1px solid #dfdfdf;
   border-bottom: 1px solid #dfdfdf;
-  padding: 30px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+}
+
+.our-course .course-desc .course-list-box {
+  padding: 30px;
 }
 
 .our-course .course-desc .course-list {
@@ -1282,6 +1245,12 @@
   background-color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+.buy-btn-1,
+.buy-btn-2,
+.buy-btn-3 {
+  padding: 0 30px 30px 30px;
 }
 
 .buy-btn-1 button {
@@ -1480,8 +1449,8 @@
 .faq-question {
   font-family: "Lato", sans-serif;
   padding: 30px;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 26px;
   cursor: pointer;
   display: flex;
@@ -1879,6 +1848,10 @@
     width: 18px;
   }
 
+  .navbar-section {
+    height: 80px;
+  }
+
   .navbar-section .navbar-toggler {
     border: none !important;
     outline: none !important;
@@ -1888,6 +1861,20 @@
   .navbar-section .navbar-toggler:focus {
     outline: none;
     box-shadow: none;
+  }
+
+  .navbar-section .header_logo img {
+    width: 162px;
+    height: 46px;
+    object-fit: cover;
+  }
+
+  .banner .banner-left .big-btn {
+    display: flex;
+    margin: 0 auto 20px auto;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 500;
   }
 
   .why-bright-baby {
@@ -1935,6 +1922,17 @@
     display: none;
   }
 
+  .why-bright-baby .bright-bird {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 22px;
+    background: url("/assets/whyBrightBaby/bird.svg") right bottom no-repeat;
+    background-size: cover;
+    top: 330px;
+    right: 63px;
+  }
+
   .why-bright-baby .left-image::before {
     content: "";
     position: absolute;
@@ -1943,7 +1941,7 @@
     background: url("/assets/whyBrightBaby/Isolation_Mode.svg") left bottom
       no-repeat;
     background-size: cover;
-    top: 8%;
+    top: 4%;
     left: 80px;
   }
 
@@ -1954,7 +1952,7 @@
     width: 77px;
     background: url("/assets/whyBrightBaby/sky.svg") left bottom no-repeat;
     background-size: cover;
-    top: 25%;
+    top: 22%;
     left: 5%;
   }
 
@@ -2005,8 +2003,14 @@
     height: 188px;
   }
 
-  .our-course .course-desc {
+  .our-course .course-desc .course-list-box {
     padding: 20px;
+  }
+
+  .buy-btn-1,
+  .buy-btn-2,
+  .buy-btn-3 {
+    padding: 0 20px 20px 20px;
   }
 
   .testimonial {
@@ -2025,6 +2029,7 @@
   .testimonial .rating-box-list .testi-name {
     margin-top: 20px;
     margin-left: 74px;
+    gap: 16px;
   }
 
   .testimonial .title {
@@ -2042,8 +2047,13 @@
     padding: 20px;
   }
 
+  .testimonial .rating-box-list .testi-name .testi_name_box {
+    width: 60px;
+    height: 60px;
+    font-size: 22px;
+  }
+
   .testimonial .testimonial_arrow,
-  .testimonial .view-all,
   .garbh-section .testimonial_arrow,
   .video-gallery-section .testimonial_arrow {
     display: none;
