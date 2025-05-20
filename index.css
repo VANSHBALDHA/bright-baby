@@ -123,13 +123,15 @@ html {
 /* Banner section */
 
 .banner {
-  background: url(assets/banner/Group\ 1.png), #f9eefb;
+  background: url("assets/banner/Group 1.png"), #f9eefb;
   position: relative;
-  padding: 100px 0;
   overflow: hidden;
-  background-position: right -30px;
+  background-position: 110% -10px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto 90%;
+  height: calc(100vh - 94px);
+  display: flex;
+  align-items: center;
 }
 
 .banner .child-image {
@@ -238,15 +240,27 @@ html {
   height: auto;
 }
 
-/* @media (max-width: 1399px) {
+@media (min-width: 1920px) {
   .banner {
-    background-position: right -30px center;
+    background-position: 100% -20px;
   }
-} */
+}
 
-@media (max-width: 1399px) {
+@media (min-width: 1440px) and (max-width: 1919px) {
   .banner {
-    background-position: 124% -23px;
+    background-position: 110% -23px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .banner {
+    background-position: 130% -20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .banner {
+    background-position: 150% -30px;
   }
 }
 
@@ -1107,8 +1121,8 @@ html {
 .rating-box-list .slider-arrow-left,
 .rating-box-list .slider-arrow-right {
   position: absolute;
-  top: 43%;
-  transform: translateY(-43%);
+  top: 52%;
+  transform: translateY(-52%);
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -1233,7 +1247,8 @@ html {
   letter-spacing: 0;
 }
 
-.our-course .course-desc button {
+.our-course .course-desc a {
+  display: inline-block;
   width: 100%;
   border-radius: 8px;
   padding: 13px 0;
@@ -1245,6 +1260,8 @@ html {
   background-color: #fff;
   cursor: pointer;
   transition: background-color 0.3s;
+  text-align: center;
+  text-decoration: none;
 }
 
 .buy-btn-1,
@@ -1253,32 +1270,32 @@ html {
   padding: 0 30px 30px 30px;
 }
 
-.buy-btn-1 button {
+.buy-btn-1 a {
   border: 1px solid #ff758a;
   color: #ff758a;
 }
 
-.buy-btn-1 button:hover {
+.buy-btn-1 a:hover {
   background-color: #ff758a;
   color: #fff;
 }
 
-.buy-btn-2 button {
+.buy-btn-2 a {
   border: 1px solid #765cfe;
   color: #765cfe;
 }
 
-.buy-btn-2 button:hover {
+.buy-btn-2 a:hover {
   background-color: #765cfe;
   color: #fff;
 }
 
-.buy-btn-3 button {
+.buy-btn-3 a {
   border: 1px solid #e6b300;
   color: #e6b300;
 }
 
-.buy-btn-3 button:hover {
+.buy-btn-3 a:hover {
   background-color: #efba00ee;
   color: #fff;
 }
@@ -1514,6 +1531,11 @@ html {
   width: 15%;
 }
 
+.quick-links ul li a {
+  text-decoration: none;
+  color: #ffffff99;
+}
+
 .contact-info {
   width: 25%;
 }
@@ -1676,6 +1698,12 @@ html {
   margin-right: 20px;
   padding-right: 20px;
 }
+
+/* .footer-bottom .privacy-terms a:last-child {
+  border-left: 3px solid #7c6382;
+  margin-left: 20px;
+  padding-left: 20px;
+} */
 
 .whatsapp-btn-footer a {
   align-items: center;
